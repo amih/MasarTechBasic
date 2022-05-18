@@ -17,7 +17,7 @@
 //     > newVariable123 = [ { name: 'Ami', age: 51, shoes: 45, city: 'Hod Hasharon' }, { name: 'Joe', age: 18, shoes: 43, city: 'New York' }, { name: 'Mike', age: 23, shoes: 44, city: 'Miami' } ]
 // 13. Here is an empty function, make it print some text with console.log
 //     > ()=>{}
-// 14. Don't worry if it didn't work, practice what you can, ask friends and we will discuss on Friday.
+// 14. Don't worry if something didn't work, practice what you can, ask friends and we will discuss on Friday.
 // 15. Read the lines below and think about it
 
 theNameIs = 'Ami'
