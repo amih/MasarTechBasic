@@ -21,7 +21,57 @@
 // 15. Read the lines below and think about it
 
 theNameIs = 'Ami'
+console.log( "Hello " + theNameIs + ", how are you?")
 theNameIs = 'John'
+console.log( "Hello " + theNameIs + ", how are you?")
+
+theNameIs = 1 + 2
+console.log( "Hello " + theNameIs + ", how are you?")
+console.log( "Sorry, the answer to one plus two is: " + theNameIs)
+
+myFunc = () => {}
+myFunc()
+myFunc = () => { return 4 }
+myFunc()
+
+myAddingFunc = (a, b) => { return a+b }
+myAddingFunc(3, 4)
+myAddingFunc( 31, 42 )
+
+specialFunc = (a, b) => { if(a==2){ return a+b }else{ return a*b } }
+specialFunc(2, 5)
+specialFunc(5, 2)
+
+counter = 7
+console.log( 'The counter is: ' + counter )
+counter = 13
+console.log( 'The counter is: ' + counter )
+counter = counter + 1
+console.log( 'The counter is: ' + counter )
+counter = counter + 2
+console.log( 'The counter is: ' + counter )
+counter++
+console.log( 'The counter is: ' + counter )
+
+myList = [ 7, 3, 88, 22, 0.11, -23, "RED", 'blue', 20000100 ]
+console.log( 'The 1st element is: ' + myList[0] )
+console.log( 'The 2nd element is: ' + myList[1] )
+console.log( 'The 3rd element is: ' + myList[2] )
+
+myObject = { firstName: "Ami", lastName: "Heines", ShoeSize: 45, Age: 51, city: "Hod Hasharon" }
+
+console.log( "Hello " + myObject.firstName + ", I see you live in " + myObject.city )
+
+listOfObjects = [
+    { firstName: "Ami", lastName: "Heines", ShoeSize: 45, Age: 51, city: "Hod Hasharon" },
+    { firstName: "Joe", lastName: "Cohen", ShoeSize: 42, Age: 24, city: "New York" },
+    { firstName: "Marry", lastName: "Lane", ShoeSize: 43, Age: 46, city: "London" },
+    { firstName: "Ringo", lastName: "Levy", ShoeSize: 38, Age: 34, city: "Haifa" },
+    { firstName: "May", lastName: "Paz", ShoeSize: 46, Age: 21, city: "Tira" },
+    { firstName: "Bob", lastName: "Zak", ShoeSize: 42, Age: 11, city: "Tel Aviv" },
+]
+
+for(i=0; i<6; i++){ console.log("Firstname:" + listOfObjects[i].firstName) }
 
 myFunc = () => {for( counter = 20; counter > 10; counter = counter -1 ) { console.log( "the counter is: " + counter ) } }
 () => {for( counter = 20; counter > 10; counter = counter -1 ) { console.log( "the counter is: " + counter ) } }
