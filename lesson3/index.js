@@ -4,16 +4,33 @@ console.log('שורה מלוח הכפל')
 oneLine = (lineNumber) => {
 	s1 = '' // preparing the line - start with empty!
 	for(i=1; i <= 10; i++){
-		s1 = s1 + ' ' + ( i * lineNumber )
+		nextNum = i * lineNumber
+		if(nextNum<10){
+			s1 = s1 + ' &nbsp;&nbsp;' + nextNum
+		}else if(nextNum<100){
+			s1 = s1 + ' &nbsp;' + nextNum
+		}else{
+			s1 = s1 + ' ' + nextNum
+		}
 	}
 	return s1
 }
 
+
+
 // s2 = oneLine( 4 )
 // console.log(s2)
-
+elem = document.querySelector ( '#multiplicationTable' )
 for( j = 1; j <=10; j++){
-	document.write( '<br>' + oneLine(j)  )
+	// console.log( oneLine(j)  )
+	// find the div by ID (multiplicationTable)
+	// write the line to it.
+	// document.write( '<br>' + oneLine(j)  )
+	if( j % 2 ){
+		elem.innerHTML += '<div class="even">' + oneLine(j) + '</div>'
+	}else{
+		elem.innerHTML += '<div class="odd">' + oneLine(j) + '</div>'
+	}
 }
 
 // find minimum of list of numbers
@@ -27,13 +44,13 @@ findMin = ( a ) => {
 	return x // the final x is the answer
 }
 
-// test if the function works:
-console.log( 'Test findMin (should be 2) ' )
-console.log( findMin( [ 3,2,100,10,5 ] ) )
+// // test if the function works:
+// console.log( 'Test findMin (should be 2) ' )
+// console.log( findMin( [ 3,2,100,10,5 ] ) )
 
-// test #2 if the function works:
-console.log( 'Test findMin #2 (should be 2000000000) ' )
-console.log( findMin( [ 3000000000, 2000000000, 10000000000 ] ) )
+// // test #2 if the function works:
+// console.log( 'Test findMin #2 (should be 2000000000) ' )
+// console.log( findMin( [ 3000000000, 2000000000, 10000000000 ] ) )
 
 
 makeNewPersonObject = (theNewName, theAge, shoeSize) => {
@@ -88,3 +105,30 @@ makeNewPersonObject = (theNewName, theAge, shoeSize) => {
 //   8  16  24  32  40  48  56  64  72  80
 //   9  18  27  36  45  54  63  72  81  90
 //  10  20  30  40  50  60  70  80  90 100
+
+person = { firstName: "Ami", lastName: "Heines", age: 51, shoeSize: 45 }
+
+
+getOnlyEvenNumbers = (theListOfNumbers) => {
+	console.log('start the length of the parameter:' + theListOfNumbers.lenght)
+  s = []
+  for(i=0; i<theListOfNumbers.lenght; i++){
+		console.log('in loop, i:' + i)
+		if( theListOfNumbers[i] % 2 == 0 ){
+			console.log('found even num:' + theListOfNumbers[i])
+			s.push( theListOfNumbers[i] )
+		}
+	}
+	return s
+}
+console.log('testing get EVEN numbers:')
+myArray = [ 432,234,23,4,234,2,34,4,54,6,4,67,5,8,854,6,456 ]
+console.log( getOnlyEvenNumbers(myArray) )
+console.log('testing AGAIN get EVEN numbers:')
+myList = [ 1,2,3,4,5,6,7,8,9,10  ]
+console.log( getOnlyEvenNumbers(myList) )
+
+// 1. write a function "getOnlyEvenNumbers" which gets an input a list of numbers
+//    and returns only the even numbers ( the ones that have num % 2 == 0 )
+
+// 2. 

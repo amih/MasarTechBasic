@@ -1,0 +1,13 @@
+#explainerText {
+	color: salmon;
+	font-size: 20px;
+}
+#multiplicationTable {
+	color: blue;
+	font-family: monospace;
+}
+.even{
+	/* background-color: cyan; */
+	color: green;
+	font-weight: bold;
+}
