@@ -102,7 +102,7 @@ ol {
 }
 
 .seat input[type=checkbox]:disabled + label {
-  background: orange;
+  background: red;
   text-indent: -9999px;
   overflow: hidden;
 }
@@ -148,6 +148,7 @@ ol {
 .seat label:hover {
   cursor: pointer;
   box-shadow: 0 0 0 2px #5C6AFF;
+  font-size: 20px;
 }
 
 @-webkit-keyframes rubberBand {
@@ -215,19 +216,26 @@ ol {
   animation-name: rubberBand;
 }
 
-
 .row--4 .seat label{
   background-color: green;
 }
 
-.row .seat-A label, .row .seat-F label{
+
+.seat-A label, .seat-F label{
   background: lightgreen;
 }
 
+.row .seat-C label, .row .seat-D label{
+  background: lightblue;
+}
+
+
 .row--3 .seat-B label, .row--6 .seat-D label, .row--4 .seat-B label{
   background-color: purple;
+  /* text-indent: 10px; */
 }
 
 .row.textBlack .seat label{
   color: black;
 } 
+

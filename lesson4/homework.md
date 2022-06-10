@@ -6,3 +6,6 @@
 4. color all "isle" seats in light blue
 5. make sure selection of seats as "disabled" or "checked" works and overrides the other colors, it is the most important color.
 
+
+sndlnsdlkn
+
